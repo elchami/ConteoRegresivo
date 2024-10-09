@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuenta Regresiva para la Graduación</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #1d1f33;
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+            background-image: url('https://static.vecteezy.com/system/resources/previews/007/620/393/non_2x/graduation-hats-background-with-mortar-boards-vector.jpg');
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+        }
+        .countdown {
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        .countdown h1 {
+            font-size: 2.5rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+            color: #e0e0e0;
+        }
+        .time {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3rem;
+            font-weight: 500;
+            color: #00ffab;
+        }
+        .countdown span {
+            font-size: 1.2rem;
+            color: #aaa;
+            display: block;
+            margin-top: 10px;
+        }
+        .graduation-hat {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="countdown">
+        <img class="graduation-hat" src="https://cdn.vectorstock.com/i/1000x1000/82/37/graduation-cap-icon-design-vector-22058237.webp" alt="Graduación" width="80">
+        <h1>¡Cuenta regresiva para la graduación!</h1>
+        <div id="time" class="time">Cargando...</div>
+        <span>19 de octubre de 2024</span>
+    </div>
+
+    <script src="countdown.js"></script>
+</body>
+</html>
