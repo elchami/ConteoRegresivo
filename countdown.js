@@ -1,5 +1,5 @@
 // Establecer la fecha objetivo directamente en el código (formato: año, mes-1, día)
-const targetDate = new Date(2024, 9, 19, 9, 39); // Octubre es el mes 9 (los meses en JavaScript son base 0)
+const targetDate = new Date(2024, 9, 19); // Octubre es el mes 9 (los meses en JavaScript son base 0)
 
 function startCountdown() {
     const countdownElement = document.getElementById('time');
