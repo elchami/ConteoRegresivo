@@ -1,8 +1,8 @@
 // Establecer la fecha objetivo directamente en el código (formato: año, mes-1, día)
-const targetDate = new Date(2024, 9, 19); // Octubre es el mes 9 (los meses en JavaScript son base 0)
-//const targetDate = Date.now() + 5000;
+const targetDate = new Date(2024, 9, 19);
 const audio = new Audio("audio/Astronomia.mp3");
 const btnRola = document.getElementById('rolaBtn');
+
 
 btnRola.addEventListener('click', function() {
     audio.play();
