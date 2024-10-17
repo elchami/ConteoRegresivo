@@ -1,7 +1,6 @@
 // Establecer la fecha objetivo directamente en el código (formato: año, mes-1, día)
-//const targetDate = new Date(2024, 9, 19); // Octubre es el mes 9 (los meses en JavaScript son base 0)
-const targetDate = Date.now() + 5000; // Octubre es el mes 9 (los meses en JavaScript son base 0)
-const ovationSound = document.getElementById('ovationSound');
+const targetDate = new Date(2024, 9, 19); // Octubre es el mes 9 (los meses en JavaScript son base 0)
+//const targetDate = Date.now() + 5000;
 const audio = new Audio("audio/Astronomia.mp3");
 const btnRola = document.getElementById('rolaBtn');
 
@@ -40,7 +39,6 @@ startCountdown();
 function launchConfetti() {
     const duration = 70 * 1000; // Duración de 5 segundos
     const end = Date.now() + duration;
-
     const colors = ['#bb0000', '#ffffff', '#00ffab', '#ffeb3b'];
 
     (function frame() {
