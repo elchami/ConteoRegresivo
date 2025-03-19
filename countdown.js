@@ -1,5 +1,5 @@
 // Establecer la fecha objetivo directamente en el código (formato: año, mes-1, día)
-const targetDate = new Date(2024, 9, 19);
+const targetDate = new Date(2025, 5, 30);
 const audio = new Audio("audio/Astronomia.mp3");
 const btnRola = document.getElementById('rolaBtn');
 
@@ -17,7 +17,7 @@ function startCountdown() {
 
         if (difference <= 0) {
             clearInterval(interval);
-            countdownElement.innerText = "¡Felicidades Ingeniero, es el día de la graduación!";
+            countdownElement.innerText = "¡Ha llegado el momento de volar!";
             btnRola.removeAttribute("hidden");
             launchConfetti();
             return;
