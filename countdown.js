@@ -1,5 +1,5 @@
 // Establecer la fecha objetivo directamente en el código (formato: año, mes-1, día)
-const targetDate = new Date(2025, 5, 30);
+const targetDate = new Date(2028, 3, 30);
 const audio = new Audio("audio/Astronomia.mp3");
 const btnRola = document.getElementById('rolaBtn');
 
