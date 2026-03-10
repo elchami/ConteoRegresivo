@@ -18,7 +18,7 @@
             background-color: #1d1f33;
             color: #fff;
             font-family: 'Roboto', sans-serif;
-            background-image: url('https://static.vecteezy.com/system/resources/previews/007/620/393/non_2x/graduation-hats-background-with-mortar-boards-vector.jpg');
+            background-image: url('nonelink.com');
             background-size: cover;
             background-position: center;
             background-blend-mode: overlay;
@@ -48,18 +48,28 @@
             display: block;
             margin-top: 10px;
         }
-        .graduation-hat {
+        .clock-timer {
             margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
     <div class="countdown">
-        <img class="graduation-hat" src="https://cdn.vectorstock.com/i/1000x1000/82/37/graduation-cap-icon-design-vector-22058237.webp" alt="Graduación" width="80">
-        <h1>¡Cuenta regresiva...</h1>
-        <div id="time" class="time">Cargando...</div>
-        <span>30 de marzo de 2028</span>
-        <button id="rolaBtn" type="button" class="btn btn-dark" hidden>Que suene la rola</button>
+        <img class="clock-timer" src="https://www.shutterstock.com/image-vector/clock-face-icon-symbol-watch-600nw-2404492541.jpg" alt="Icono" width="80">
+        
+        <div id="display-container">
+            <div id="time" class="time">Cargando...</div>
+            <span id="target-text">Target Date</span>
+            <button id="rolaBtn" type="button" class="btn btn-dark" hidden>Que suene la rola</button>
+            <button id="resetBtn" class="btn btn-sm btn-outline-danger mt-4" style="display:block; margin:auto;">Cambiar fecha</button>
+        </div>
+
+        <div id="setup-container" style="display: none;">
+            <h2 class="mb-4">Elige tu fecha objetivo</h2>
+            <input type="date" id="dateInput" class="form-control mb-3">
+            <button id="saveDateBtn" class="btn btn-success w-100">Iniciar Cuenta Regresiva</button>
+        </div>
+
     </div>
     <audio id="ovationSound" src="audio/Astronomia.mp3" preload="auto"></audio>
     <script src="countdown.js"></script>
