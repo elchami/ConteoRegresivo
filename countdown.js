@@ -11,6 +11,12 @@ btnRola.addEventListener('click', function() {
 function startCountdown() {
     const countdownElement = document.getElementById('time');
 
+    const msPerSecond = 1000;
+    const msPerMinute = msPerSecond * 60;
+    const msPerHour = msPerMinute * 60;
+    const msPerDay = msPerHour * 24;
+    const msPerYear = msPerDay * 365;
+
     const interval = setInterval(() => {
         const now = new Date();
         const difference = targetDate - now;
@@ -23,12 +29,13 @@ function startCountdown() {
             return;
         }
 
-        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+        const years = Math.floor(difference / msPerYear); 
+        const days = Math.floor((difference % msPerYear) / msPerDay);
+        const hours = Math.floor((difference % msPerDay) / msPerHour);
+        const minutes = Math.floor((difference % msPerHour) / msPerMinute);
+        const seconds = Math.floor((difference % msPerMinute) / msPerSecond);
 
-        countdownElement.innerText = `${days} días, ${hours} horas, ${minutes} minutos, ${seconds} segundos`;
+        countdownElement.innerText = `${years} años, ${days} días, ${hours} horas, ${minutes} minutos, ${seconds} segundos`;
     }, 1000);
 }
 
